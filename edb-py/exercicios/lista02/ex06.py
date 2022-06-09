@@ -28,7 +28,7 @@ cavAtual=cavaleiros[init]
 chap = cavAtual.chapeu
 
 print("O número do chapeu dele dele é "+str(cavAtual.chapeu))
-at = init+1
+at = init
 while len(cavaleiros) > 1:
 
     tamanho = len(cavaleiros)
