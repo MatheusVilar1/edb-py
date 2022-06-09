@@ -2,7 +2,6 @@ import random
 
 class Cavaleiro:
     seq=0
-
     def __init__(self,chapeu):
         self.__class__.seq+=1
         self.id=self.__class__.seq
@@ -28,8 +27,8 @@ print("primeira escolha foi o cavaleiro "+str(init+1))
 cavAtual=cavaleiros[init]
 chap = cavAtual.chapeu
 
-print("O número do chapeu dele é chapeu dele é "+str(cavAtual.chapeu))
-at = init
+print("O número do chapeu dele dele é "+str(cavAtual.chapeu))
+at = init+1
 while len(cavaleiros) > 1:
 
     tamanho = len(cavaleiros)
@@ -37,12 +36,13 @@ while len(cavaleiros) > 1:
 
     if(chap>0):
         while contador!=abs(chap):
-            at += 1
-            if at >= len(cavaleiros):
-                at = 0
+
             cavAtual=cavaleiros[at]
             print("O cavaleiro Atual é o "+str(cavAtual)+" Contagem:"+str(contador+1))
             contador+=1
+            at += 1
+            if at >= len(cavaleiros):
+                at = 0
 
     if (chap < 0):
         while contador != abs(chap):
